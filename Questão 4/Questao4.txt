@@ -1,0 +1,5 @@
+HOST = 52.200.142.116;
+USUARIO = ctflteste;
+SENHA = YdrTXPK#mcG7KUT#H@$P;
+ARQUIVO = Great Job.txt;
+CONTEUDO DO ARQUVIO = Your server is not safe, try for new password ideas in next time.ldoebaot.h
