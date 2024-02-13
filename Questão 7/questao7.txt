@@ -7,6 +7,8 @@ Infraestrutura de serviços da Amazon Web Services (AWS)
 
 São elementos essenciais na instância em nuvem da AWS, ajudando a criar e gerenciar ambientes seguros e acessíveis até certo ponto.
 Para compreender a relação entre eles, é preciso entender o que é VPC (Virtual Private Cloud): é basicamente o pai de todas as redes que estiver dentro de uma infraestrutura da Amazon.
-Ao criar serviços ou instâncias nesta nuvem e posicioná-los dentro dessa VPC, é necessário ter estes 3 componentes citados. Porque, primeiro, as VPNs na AWS servem para conectar de maneira segura a infraestrutura local e a instância em nuvem da AWS. Segundo, as Subnets (sub-redes) são as zonas de hospedagem que terão dentro do VPC, onde irá delegar a hospedagem dos serviços e faixas do IP que cada zona utilizará - por exemplo: VPC (10.0.0.0/16) poderá ter as SubNets (10.0.1.0/24), (10.0.2.0/24), e por aí vai. E terceiro, Security Groups são grupos de segurança que facilitam a segurança ao criar um "firewall virtual" que controla o tráfego de uma ou mais instância - sendo possível associar um ou mais groupos a ela, e decidir quem poderá acessar o quê.
+Ao criar serviços ou instâncias nesta nuvem e posicioná-los dentro dessa VPC, é necessário ter estes 3 componentes citados. Porque, primeiro, as VPNs na AWS servem para conectar de maneira segura a infraestrutura local e a instância em nuvem da AWS. 
+Segundo, as Subnets (sub-redes) são as zonas de hospedagem que terão dentro do VPC, onde irá delegar a hospedagem dos serviços e faixas do IP que cada zona utilizará - por exemplo: VPC (10.0.0.0/16) poderá ter as SubNets (10.0.1.0/24), (10.0.2.0/24), e por aí vai. 
+E terceiro, Security Groups são grupos de segurança que facilitam a segurança ao criar um "firewall virtual" que controla o tráfego de uma ou mais instância - sendo possível associar um ou mais groupos a ela, e decidir quem poderá acessar o quê.
 
 Assim, elas se relacionam de forma organizada e segura ao VPC na AWS.
