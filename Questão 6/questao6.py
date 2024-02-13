@@ -1,10 +1,12 @@
 from selenium import webdriver
+from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.chrome.service import Service
 from time import sleep
 
 # Function to wait until element appear
@@ -31,8 +33,13 @@ quotesDict = {
 
 try:
     # Connection net
-    driver = webdriver.Edge()
-
+    options= webdriver.ChromeOptions()
+    #options.add_argument('--headless')
+    options.add_argument('--disable-gpu')
+    options.add_argument('--no-sandbox')
+    options.add_argument('--disable-dev-shm-usage')
+    driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
+    
     driver.get('http://quotes.toscrape.com/')
 
     waitForElement((By.CLASS_NAME, 'quote'))
@@ -91,5 +98,4 @@ try:
 except KeyboardInterrupt:
     print('\n\n~~~~~~~~~ Fim do programa ~~~~~~~~~\n')
 except Exception as err:
-    driver.save_screenshot('erro.png')
     print('ERRO: ', str(err))
