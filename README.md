@@ -42,6 +42,7 @@
 
           ```
           Python 3.8+
+          Google Chrome
 
           # Rodar no terminal, no mesmo caminho do arquivo .py:
           pip install Selenium
